@@ -1,0 +1,1 @@
+E:\repos\PokedexApp\PokedexApp\PokedexApp.csproj;x64

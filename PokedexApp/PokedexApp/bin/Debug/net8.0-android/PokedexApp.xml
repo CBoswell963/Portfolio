@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PokedexApp</name>
+    </assembly>
+    <members>
+        <member name="T:PokedexApp.App">
+            <summary>
+            The main application class for the Pokedex App
+            </summary>
+        </member>
+        <member name="M:PokedexApp.App.#ctor">
+            <summary>
+            Initializes a new instance of the App class.
+            Sets the main page of the application to the main navigation page
+            </summary>
+        </member>
+        <member name="T:PokedexApp.Views.MainPage">
+            <summary>
+            The main page of the Pokedex App where users can search for Pokemon
+            </summary>
+        </member>
+        <member name="M:PokedexApp.Views.MainPage.#ctor">
+            <summary>
+            Initializes instance of the MainPage class.
+            Sets the binding context to PokemonViewModel
+            </summary>
+        </member>
+        <member name="T:PokedexApp.Views.DetailsPage">
+            <summary>
+            Details page for displaying specific Pokemon information
+            </summary>
+        </member>
+        <member name="M:PokedexApp.Views.DetailsPage.#ctor(PokedexApp.Models.Pokemon)">
+            <summary>
+            Initializes a new instance of the DetailsPage class
+            </summary>
+            <param name="pokemon">The Pokemon to display details for</param>
+        </member>
+        <member name="T:PokedexApp.Models.Pokemon">
+            <summary>
+            Represents a Pokemon and its details.
+            </summary>
+        </member>
+        <member name="P:PokedexApp.Models.Pokemon.Id">
+            <summary>
+            Gets or sets the Pokemon's ID
+            </summary>
+        </member>
+        <member name="P:PokedexApp.Models.Pokemon.Name">
+            <summary>
+            Gets or sets the Pokemon's name
+            </summary>
+        </member>
+        <member name="P:PokedexApp.Models.Pokemon.ImageUrl">
+            <summary>
+            Gets or sets the Pokemon's image
+            </summary>
+        </member>
+        <member name="P:PokedexApp.Models.Pokemon.Type">
+            <summary>
+            Gets or sets the Pokemon's first type
+            </summary>
+        </member>
+        <member name="T:PokedexApp.Services.AppDbContext">
+            <summary>
+            Database context for accessing Pokemon data using SQLite
+            </summary>
+        </member>
+        <member name="P:PokedexApp.Services.AppDbContext.Pokemons">
+            <summary>
+            Gets or sets the collection of Pokemon
+            </summary>
+        </member>
+        <member name="M:PokedexApp.Services.AppDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Configures the databse connection for the context
+            </summary>
+            <param name="optionsBuilder">The options builder for configuring the database context</param>
+        </member>
+        <member name="F:PokedexApp.Services.PokemonService._httpClient">
+            <summary>
+            Service for fetching Pokemon data from the external API
+            </summary>
+        </member>
+        <member name="M:PokedexApp.Services.PokemonService.#ctor">
+            <summary>
+            Initializes a new instance of the PokemonService class
+            </summary>
+        </member>
+        <member name="M:PokedexApp.Services.PokemonService.GetPokemonByIdOrName(System.String)">
+            <summary>
+            Fetches the Pokemon details based on the provided ID or name
+            </summary>
+            <param name="input">The Pokemon name or ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:PokedexApp.ViewModels.PokemonViewModel">
+            <summary>
+            ViewModel for handling the logic related to Pokemon data
+            </summary>
+        </member>
+        <member name="P:PokedexApp.ViewModels.PokemonViewModel.Pokemon">
+            <summary>
+            Gets or sets the Pokemon object
+            </summary>
+        </member>
+        <member name="P:PokedexApp.ViewModels.PokemonViewModel.FetchPokemonCommand">
+            <summary>
+            Command for fetching Pokemon data
+            </summary>
+        </member>
+        <member name="M:PokedexApp.ViewModels.PokemonViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the PokemonViewModel class
+            Sets up the fetch command
+            </summary>
+        </member>
+        <member name="M:PokedexApp.ViewModels.PokemonViewModel.FetchPokemon(System.String)">
+            <summary>
+            Fecthes Pokemon data based on user input
+            </summary>
+            <param name="input">The Pokemon name or ID</param>
+            <returns></returns>
+        </member>
+        <member name="E:PokedexApp.ViewModels.PokemonViewModel.PropertyChanged">
+            <summary>
+            Event raised when a property value changes
+            </summary>
+        </member>
+        <member name="M:PokedexApp.ViewModels.PokemonViewModel.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the PropertyChanged event
+            </summary>
+            <param name="propertyName">The name of the property that changed</param>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+    </members>
+</doc>

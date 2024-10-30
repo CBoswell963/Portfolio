@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PokedexApp.Views.MainPage">
+    <StackLayout Padding="10">
+        <!-- Entry for user to input the Pokemon name or ID -->
+        <Entry Placeholder="Enter Pokémon Name or ID"
+               Text="{Binding InputName}"
+               x:Name="InputName"/>
+        
+        <!-- Button to trigger search for the Pokemon -->
+        <Button Text="Search"
+                Command="{Binding FetchPokemonCommand}"
+                CommandParameter="{Binding Text, Source={x:Reference InputName}}"/>
+        
+        <!-- Fetched Pokemon's image -->
+        <Image Source="{Binding Pokemon.ImageUrl}" HeightRequest="200"/>
+        
+        <!-- Pokemon's name -->
+        <Label Text="{Binding Pokemon.Name}" FontSize="24"/>
+        
+        <!-- Pokemon's type/s -->
+        <Label Text="{Binding Pokemon.Type}" FontSize="18"/>
+    </StackLayout>
+</ContentPage>

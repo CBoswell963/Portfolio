@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PokedexApp.Views.DetailsPage">
+    <StackLayout Padding="10">
+        <!-- Image of the selected Pokemon -->
+        <Image Source="{Binding Pokemon.ImageUrl}" HeightRequest="200"/>
+        
+        <!-- Label displaying the Pokemon's name -->
+        <Label Text="{Binding Pokemon.Name}" FontSize="24"/>
+        
+        <!-- Label displaying the Pokemon's type -->
+        <Label Text="{Binding Pokemon.Type}" FontSize="18"/>
+        
+        <!-- Additional details will be added here, such as height and weight -->
+    </StackLayout>
+</ContentPage>
