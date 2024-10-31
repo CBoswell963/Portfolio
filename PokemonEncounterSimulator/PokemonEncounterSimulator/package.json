@@ -1,0 +1,13 @@
+{
+  "name": "pokemon-encounter-simulator",
+  "version": "0.0.0",
+  "description": "PokemonEncounterSimulator",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "eslintConfig": {},
+  "dependencies": {
+    "eslint": "^8.57.1"
+  }
+}

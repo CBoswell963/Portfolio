@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\repos\\PokemonEncounterSimulator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C81C2349-DB3E-44D4-A5C5-13E92D895281}|PokemonEncounterSimulator\\PokemonEncounterSimulator.njsproj|E:\\repos\\PokemonEncounterSimulator\\PokemonEncounterSimulator\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C81C2349-DB3E-44D4-A5C5-13E92D895281}|PokemonEncounterSimulator\\PokemonEncounterSimulator.njsproj|solutionrelative:PokemonEncounterSimulator\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "server.js",
+              "DocumentMoniker": "E:\\repos\\PokemonEncounterSimulator\\PokemonEncounterSimulator\\server.js",
+              "RelativeDocumentMoniker": "PokemonEncounterSimulator\\server.js",
+              "ToolTip": "E:\\repos\\PokemonEncounterSimulator\\PokemonEncounterSimulator\\server.js",
+              "RelativeToolTip": "PokemonEncounterSimulator\\server.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-31T03:26:29.427Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
