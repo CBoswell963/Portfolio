@@ -28,9 +28,25 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="public\caught.html" />
+    <Content Include="public\encounter.html" />
+    <Content Include="public\encounterResult.html" />
+    <Content Include="public\images\icons\PokemonEncounter192.png" />
+    <Content Include="public\images\icons\PokemonEncounter512.png" />
+    <Content Include="public\index.html" />
+    <Content Include="public\manifest.json" />
+    <Content Include="public\pokemonDetail.html" />
+    <Content Include="public\script.js" />
+    <Content Include="public\service-worker.js" />
+    <Content Include="public\style.css" />
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\images\icons\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

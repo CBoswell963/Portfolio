@@ -8,6 +8,7 @@
   },
   "eslintConfig": {},
   "dependencies": {
-    "eslint": "^8.57.1"
+    "eslint": "^8.57.1",
+    "express": "^4.21.1"
   }
 }
