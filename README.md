@@ -9,5 +9,11 @@ While I began programming because I was pursuing a career in making games, once 
 working through how the code fits together to turn the algorithms into a working program, and looking back over the code if, or more often than not when, something goes wrong to find where the problem is and how to fix it.  Coding is something I love to do
 and I plan to keep working on projects and expanding my portfolio going forward.  I hope you enjoy my work, because I enjoyed making them.
 
-If you want to try out some of the projects I have made, I have added links to them in my LinkedIn profile below.
+If you want to try out some of the projects I have made, I have added links to them in my LinkedIn profile below, in addition to the direct links to the projects.
 https://www.linkedin.com/in/caboswell-452353135/
+
+PokedexApp project link
+https://appetize.io/app/b_4a4xzf4x3qbujsm24ed6u3umqm
+
+PokemonEncounterSimulator project link
+https://portfolio-s31f.onrender.com/
