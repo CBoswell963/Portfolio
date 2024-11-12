@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\repos\\PokemonEncounterSimulator\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C81C2349-DB3E-44D4-A5C5-13E92D895281}|PokemonEncounterSimulator\\PokemonEncounterSimulator.njsproj|E:\\repos\\PokemonEncounterSimulator\\PokemonEncounterSimulator\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C81C2349-DB3E-44D4-A5C5-13E92D895281}|PokemonEncounterSimulator\\PokemonEncounterSimulator.njsproj|solutionrelative:PokemonEncounterSimulator\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C81C2349-DB3E-44D4-A5C5-13E92D895281}|PokemonEncounterSimulator\\PokemonEncounterSimulator.njsproj|E:\\repos\\PokemonEncounterSimulator\\PokemonEncounterSimulator\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C81C2349-DB3E-44D4-A5C5-13E92D895281}|PokemonEncounterSimulator\\PokemonEncounterSimulator.njsproj|solutionrelative:PokemonEncounterSimulator\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +31,36 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "package.json",
+              "DocumentMoniker": "E:\\repos\\PokemonEncounterSimulator\\PokemonEncounterSimulator\\package.json",
+              "RelativeDocumentMoniker": "PokemonEncounterSimulator\\package.json",
+              "ToolTip": "E:\\repos\\PokemonEncounterSimulator\\PokemonEncounterSimulator\\package.json",
+              "RelativeToolTip": "PokemonEncounterSimulator\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-05T01:19:02.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "server.js",
+              "DocumentMoniker": "E:\\repos\\PokemonEncounterSimulator\\PokemonEncounterSimulator\\server.js",
+              "RelativeDocumentMoniker": "PokemonEncounterSimulator\\server.js",
+              "ToolTip": "E:\\repos\\PokemonEncounterSimulator\\PokemonEncounterSimulator\\server.js",
+              "RelativeToolTip": "PokemonEncounterSimulator\\server.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-05T01:17:00.799Z",
+              "EditorCaption": ""
             }
           ]
         }
