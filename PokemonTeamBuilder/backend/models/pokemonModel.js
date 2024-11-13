@@ -1,4 +1,9 @@
-// Pokemon model for defining the schema for Pokemon associated with teams
+// backend/models/pokemonModel.js
+
+/**
+ * Pokemon schema to define attributes for each Pokemon.
+ * Stores basic data such as name, types and stats.
+ */
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
@@ -19,12 +24,30 @@ const Pokemon = sequelize.define('Pokemon', {
         type: DataTypes.STRING,
         allowNull: true, //allows null value to accommodate Pokemon with only one type
     },
-    hp: DateTypes.INTEGER,
-    attack: DataTypes.INTEGER,
-    defense: DataTypes.INTEGER,
-    specialAttack: DataTypes.INTEGER,
-    specialDefense: DataTypes.INTEGER,
-    speed: DataTypes.INTEGER,
+    hp: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
+    attack: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
+    defense: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
+    specialAttack: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
+    specialDefense: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
+    speed: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
 }, {
     tableName: 'pokemon',
     timestamps: false,
