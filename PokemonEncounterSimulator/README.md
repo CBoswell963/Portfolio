@@ -24,3 +24,5 @@ It will also show further details of the Pokemon including its Type/s, its heigh
 will redirect the user back to the Caught Pokemon page.  On the Caught Pokemon page the user can select the release button next to a Pokemon to choose to release it.  If they press this button, a window will pop up asking
 the user if they are sure they want to release said Pokemon.  If the user selects cancel from the window, then nothing happens and they simply remain on the Caught Pokemon page.
 If the user selects yes, then the selected Pokemon will be released and removed from the Caught Pokemon page.
+
+Link to App:  https://portfolio-s31f.onrender.com/
