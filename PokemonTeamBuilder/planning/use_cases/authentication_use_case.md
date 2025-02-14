@@ -73,6 +73,6 @@ Alternate Flows:
 
         User is taken to Login page
 
-        User enters authentication credentials that do not match any registered credentieals
+        User enters authentication credentials that do not match any registered credentials
 
         User remains on Login page and a message displays saying the login credentials were incorrect
