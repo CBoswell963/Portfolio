@@ -9,6 +9,11 @@ lazy val root = (project in file("."))
   .settings(
     name := "Pokemon Team Builder",
     libraryDependencies ++= Seq(
-      scalaTest % Test
+      "org.tpolecat" %% "doobie-core"     % "1.0.0-RC4",
+      "org.tpolecat" %% "doobie-hikari"   % "1.0.0-RC4",
+      "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC4",
+      "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4" % Test,
+      "org.typelevel" %% "cats-effect"    % "3.5.1",
+      "com.github.pureconfig" %% "pureconfig" % "0.17.4"
     )
   )

@@ -1,7 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0mD:\Documents\Github\Portfolio\PokemonTeamBuilder\backend\src\test\scala\com\CBoswell963\pokemondb\HelloSpec.scala:7:18: ambiguous reference to overloaded definition,[0m
-[0m[[0m[31merror[0m] [0m[0mboth method + in class Int of type (x: Char): Int[0m
-[0m[[0m[31merror[0m] [0m[0mand  method + in class Int of type (x: Byte): Int[0m
-[0m[[0m[31merror[0m] [0m[0mmatch expected type ?[0m
-[0m[[0m[31merror[0m] [0m[0m        assert(1 + 1 = 2)[0m
-[0m[[0m[31merror[0m] [0m[0m                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
