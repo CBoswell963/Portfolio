@@ -12,8 +12,16 @@ lazy val root = (project in file("."))
       "org.tpolecat" %% "doobie-core"     % "1.0.0-RC4",
       "org.tpolecat" %% "doobie-hikari"   % "1.0.0-RC4",
       "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC4",
-      "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4" % Test,
       "org.typelevel" %% "cats-effect"    % "3.5.1",
-      "com.github.pureconfig" %% "pureconfig" % "0.17.4"
-    )
+      "com.github.pureconfig" %% "pureconfig" % "0.17.4",
+    
+
+      //Test Dependencies
+      "org.scalameta" %% "munit" % "1.0.0-M10" % Test,
+      "org.testcontainers" % "postgresql" % "1.19.3" % Test,
+      "org.typelevel" %% "munit-cats-effect-3" % "1.0.0" % Test,
+      "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4" % Test
+    ),
+
+    testFrameworks += new TestFramework("munit.Framework")
   )
