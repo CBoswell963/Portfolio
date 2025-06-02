@@ -5,6 +5,9 @@ ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.CBoswell963"
 ThisBuild / organizationName := "CBoswell963"
 
+Compile / resourceDirectory := baseDirectory.value / "resources"
+
+
 lazy val root = (project in file("."))
   .settings(
     name := "Pokemon Team Builder",
