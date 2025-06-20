@@ -4,7 +4,7 @@
     This module contains the Pokemon class and its related methods
 """
 
-from PokemonTeamBuilder.backend.Models.type import Type
+from PokemonTeamBuilder.teambuilder.Models.type import Type
 
 
 class Pokemon:
