@@ -1,7 +1,6 @@
 # Team class model
 
 from pokemon import Pokemon
-from type import Type
 
 class Team:
 
@@ -10,6 +9,39 @@ class Team:
 
     # number of pokemon types
     TYPES = 18
+
+    # list holding the type names
+    type_names = [
+        "normal", "fire", "water", "electric", "grass", "ice", "fighting", "poison",
+        "ground", "flying", "psychic", "bug", "rock", "ghost", "dragon", "dark",
+        "steel", "fairy"
+    ]
+
+    # list for mapping type names to index values
+    type_to_index = {t: i for i, t in enumerate(type_names)}
+
+    # 2d type chart for weaknesses
+    type_chart = [
+        [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0 ], # normal
+        [ 0, -1, 1, 0, -1, -1, 0, 0, 1, 0, 0, -1, 1, 0, 0, 0, -1, -1 ], # fire
+        [ 0, -1, -1, 1, 1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0 ], # water
+        [ 0, 0, 0, -1, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0, 0, -1, 0 ], # electric
+        [ 0, 1, -1, -1, -1, 1, 0, 1, -1, 1, 0, 1, 0, 0, 0, 0, 0, 0 ], # grass
+        [], # ice
+        [], # fighting
+        [], # poison
+        [], # ground
+        [], # flying
+        [], # psychic
+        [], # bug
+        [], # rock
+        [], # ghost
+        [], # dragon
+        [], # dark
+        [], # steel
+        [] # fairy
+
+    ]
 
     # Creates a team object, team name is automatically assigned based on current user's team count if none is provided
     def __init__(self, user):
