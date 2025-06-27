@@ -22,24 +22,24 @@ class Team:
 
     # 2d type chart for weaknesses
     type_chart = [
-        [ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0 ], # normal
-        [ 0, -1, 1, 0, -1, -1, 0, 0, 1, 0, 0, -1, 1, 0, 0, 0, -1, -1 ], # fire
-        [ 0, -1, -1, 1, 1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0 ], # water
-        [ 0, 0, 0, -1, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0, 0, -1, 0 ], # electric
-        [ 0, 1, -1, -1, -1, 1, 0, 1, -1, 1, 0, 1, 0, 0, 0, 0, 0, 0 ], # grass
-        [], # ice
-        [], # fighting
-        [], # poison
-        [], # ground
-        [], # flying
-        [], # psychic
-        [], # bug
-        [], # rock
-        [], # ghost
-        [], # dragon
-        [], # dark
-        [], # steel
-        [] # fairy
+        [  0,  0,  0,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0, -1,  0,  0,  0,  0 ], # normal
+        [  0, -1,  1,  0, -1, -1,  0,  0,  1,  0,  0, -1,  1,  0,  0,  0, -1, -1 ], # fire
+        [  0, -1, -1,  1,  1, -1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, -1,  0 ], # water
+        [  0,  0,  0, -1,  0,  0,  0,  0,  1, -1,  0,  0,  0,  0,  0,  0, -1,  0 ], # electric
+        [  0,  1, -1, -1, -1,  1,  0,  1, -1,  1,  0,  1,  0,  0,  0,  0,  0,  0 ], # grass
+        [  0,  1,  0,  0,  0, -1,  1,  0,  0,  0,  0,  0,  1,  0,  0,  0,  1,  0 ], # ice
+        [  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1, -1, -1,  0,  0, -1,  0,  1 ], # fighting
+        [  0,  0,  0,  0, -1,  0, -1, -1,  1,  0,  1, -1,  0,  0,  0,  0,  0, -1 ], # poison
+        [  0,  0,  1, -1,  1,  1,  0, -1,  0,  0,  0,  0, -1,  0,  0,  0,  0,  0 ], # ground
+        [  0,  0,  0,  1, -1,  1, -1,  0, -1,  0,  0, -1,  1,  0,  0,  0,  0,  0 ], # flying
+        [  0,  0,  0,  0,  0,  0, -1,  0,  0,  0, -1,  1,  0,  1,  0,  1,  0,  0 ], # psychic
+        [  0,  1,  0,  0, -1,  0, -1,  0, -1,  1,  0,  0,  1,  0,  0,  0,  0,  0 ], # bug
+        [ -1, -1,  1,  0,  1,  0,  1, -1,  1, -1,  0,  0,  0,  0,  0,  0,  1,  0 ], # rock
+        [ -1,  0,  0,  0,  0,  0, -1, -1,  0,  0,  0, -1,  0,  1,  0,  1,  0,  0 ], # ghost
+        [  0, -1, -1, -1, -1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  0,  1 ], # dragon
+        [  0,  0,  0,  0,  0,  0,  1,  0,  0,  0, -1,  1,  0, -1,  0, -1,  0,  1 ], # dark
+        [ -1,  1,  0,  0, -1, -1,  1, -1,  1, -1, -1, -1, -1,  0, -1,  0, -1, -1 ], # steel
+        [  0,  0,  0,  0,  0,  0, -1,  1,  0,  0,  0, -1,  0,  0, -1, -1,  1,  0 ] # fairy
 
     ]
 
@@ -79,22 +79,20 @@ class Team:
 
     # returns a type coverage analysis as an int list based on the pokemon in the team
     def type_coverage_analysis(self):
-        
-        strong_attack = []
-        weak_attack = []
-        strong_defense = []
-        weak_defense = []
 
         for pokemon in self.pokemon_team:
-            for type in pokemon.get_types():
-                # put code to search database for matching type and get weakness
-                # and strength lists and assign them to variables here
-                for i in self.attack_type_coverage:
-                    self.attack_type_coverage[i] += strong_attack[i]
-                    self.attack_type_coverage[i] -= weak_attack[i]
+            # gets the index value of the type for use in analysis
+            idx = self.type_to_index[pokemon.get_type_one().lower()]
 
+            # loops through type chart at index and increments corresponding index in attack coverage
+            for i in self.attack_type_coverage:
+                self.attack_type_coverage[i] += self.type_chart[idx][i]
+
+            # checks if pokemon has second type
+            if( pokemon.get_type_two() is not None ):
+                # loops through other side of type chart and de increments corresponding index in defense coverage
                 for i in self.defense_type_coverage:
-                    self.defense_type_coverage[i] += strong_defense[i]
-                    self.defense_type_coverage[i] -= weak_defense[i]
+                    self.defense_type_coverage[i] -= self.type_chart[i][idx]
+
 
         return self.attack_type_coverage, self.defense_type_coverage
