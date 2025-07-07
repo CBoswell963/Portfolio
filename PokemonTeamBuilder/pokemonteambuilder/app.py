@@ -1,4 +1,7 @@
+
 from database.pokemon_db import initialize
 
-def main():
-    initialize()
+
+def run():
+    server_address = ("", 5000)
+    httpd = HTTPServer(server_address, PokemonHandler)
