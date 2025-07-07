@@ -1,0 +1,32 @@
+# === Cache Files ===
+__pycache__/
+*.py[cod]
+*.pyo
+
+# === Virtual Environment ===
+venv/
+.env/
+
+# === Database Files ===
+*.db
+*.sqlite3
+
+# === Logs and Temporary Files ===
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+
+# === PyCharm Project Files ===
+.idea/
+*.iml
+
+# === OS-Specific Files
+.DS_Store
+Thumbs.db
+
+# === Pygame Runtime or Save Files ===
+*.sav
+*.cfg
