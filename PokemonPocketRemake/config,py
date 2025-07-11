@@ -1,0 +1,17 @@
+# config.py
+
+# Database and Configuration
+DATABASE_PATH = "database/pocket_tables.sqlite"
+
+# Pygame Window Settings
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+FPS = 60
+
+# Asset paths
+ASSET_PATH = "assets/"
+IMAGE_PATH = ASSET_PATH + "images/"
+FONT_PATH = ASSET_PATH + "fonts/"
+
+# Debugging
+DEBUG_MODE = False
