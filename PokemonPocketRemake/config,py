@@ -12,6 +12,7 @@ FPS = 60
 ASSET_PATH = "assets/"
 IMAGE_PATH = ASSET_PATH + "images/"
 FONT_PATH = ASSET_PATH + "fonts/"
+CARD_IMAGE_PATH = IMAGE_PATH + "card_images/"
 
 # Debugging
 DEBUG_MODE = False
