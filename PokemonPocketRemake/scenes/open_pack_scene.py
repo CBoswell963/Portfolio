@@ -33,14 +33,14 @@ class OpenPackScene:
                 self.screen.blit(self.pack_image, (300,200))
             elif self.state == "showing_cards":
                 card = self.pack.cards[self.current_index]
-                self.screen.blit(card.image, (250,150))
+                self.screen.blit(card.card_image, (250,150))
                 #rarity_img = pygame.image.load(f"rarities{card_rarity}")
                 #self.screen.blit(rarity_img, (350,450))
             elif self.state == "reveal_all":
                 for i, card in enumerate(self.pack.cards):
                     x = 100 + (i % 3) * 200
                     y = 100 if i < 3 else 300
-                    self.screen.blit(card.image, (x, y))
+                    self.screen.blit(card.card_image, (x, y))
 
             pygame.display.flip()
             clock.tick(30)

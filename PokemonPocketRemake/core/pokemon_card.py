@@ -6,11 +6,13 @@ class PokemonCard:
 
     def __init__(self, card_name, card_type, card_image, rarity, pokemon_type,
                  set_index):
+        CARD_WIDTH = 357
+        CARD_HEIGHT = 512
         self.card_name = card_name
         self.card_type = card_type
         card_path = CARD_IMAGE_PATH / card_image
         try:
-            self.card_image = pygame.image.load(card_path).convert_alpha()
+            self.card_image = pygame.transform.scale(pygame.image.load(card_path).convert_alpha(), (CARD_WIDTH, CARD_HEIGHT))
         except FileNotFoundError:
             raise FileNotFoundError(f"[FATAL] Card image not found: {card_path}")
         except Exception as e:
