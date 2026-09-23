@@ -1,3 +1,7 @@
+"""
+    File used for creating the open pack screen in the app
+"""
+
 import pygame
 from core.pack import Pack
 from config.config import IMAGE_PATH

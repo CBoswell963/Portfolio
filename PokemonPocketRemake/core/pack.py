@@ -1,12 +1,23 @@
+"""
+    File used for creating Pack object and
+    defining the methods used
+"""
+
 import random
 from core.pokemon_card import PokemonCard
 from database.db_connect import get_random_card_by_rarity
 
 class Pack:
+    """
+        Method for creating the initial Pack object
+    """
     def __init__(self):
         self.cards = []
         self.load_cards()
 
+    """
+        Method for loading five randoms cards into the Pack object
+    """
     def load_cards(self):
         # 3 one diamond rarity cards
         for _ in range(3):
@@ -42,6 +53,7 @@ class Pack:
         elif .10999 <= random_rarity < 1:
             rarity = "two_diamond"
 
+        # Randomly choose card based on randomly selected rarity and confirm it loaded properly
         card = get_random_card_by_rarity(rarity)
         if not card:
             print(f"[ERROR] No card found for rarity '{rarity}'")
@@ -78,7 +90,5 @@ class Pack:
             print(f"[ERROR] Card has no image loaded: {card}")
         else:
             self.cards.append(card)
-
-        print(card.card_name)
 
         random.shuffle(self.cards)

@@ -1,3 +1,7 @@
+"""
+    File used for creating the home screen for the app
+"""
+
 import pygame
 
 class HomeScene:

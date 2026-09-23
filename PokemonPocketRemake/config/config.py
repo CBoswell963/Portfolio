@@ -1,4 +1,7 @@
 # config.py
+"""
+    File for configuring paths and fixed variables
+"""
 
 from pathlib import Path
 

@@ -1,5 +1,8 @@
-
+"""
+    File used for creating user based on registered username and password
+"""
 class User:
 
-    def create_user(self):
-        pass
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
